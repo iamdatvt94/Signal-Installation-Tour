@@ -9,9 +9,11 @@ Finally, after one month from zero, I succeed in building the Signal on premise 
 	https://github.com/iamdatvt94/Signal-Installation-Tour/blob/master/signal-service-config.yml
 		- Twilio: you must create twilio account and use it if you want to send sms
 		- All redis config: you should setup 3 nodes cluster
-		- CDS replication endpoint base url:  https url of CDS. replicationPassword you can set anything and replicationCaCertificate you must get it from https cds url
+		- CDS replication endpoint base url:  https url of CDS. 
+		replicationPassword you can set anything and replicationCaCertificate you must get it from https cds url
 		- attachments and profiles: you need create s3 bucket in amazon
-		- database, messageStore and abuseDatabase: you must set up Postgresql and create three database: accountdb, messagedb, abusedb and grant roles for account in config.
+		- database, messageStore and abuseDatabase: you must set up Postgresql and create three database: 
+		accountdb, messagedb, abusedb and grant roles for account in config.
 		-> you must run config to initial Signal db:
 		~~java -jar ../jars/Signal-version.jar  accountdb migrate  ../config/config.yml~~
 		~~java -jar ../jars/Signal-version.jar  messagedb migrate  ../config/config.yml~~
