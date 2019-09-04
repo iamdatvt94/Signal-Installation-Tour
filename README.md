@@ -12,8 +12,8 @@ Finally, after one month from zero, I succeed in building the Signal on premise 
 		- CDS replication endpoint base url:  https url of CDS. 
 		replicationPassword you can set anything and replicationCaCertificate you must get it from https cds url
 		- attachments and profiles: you need create s3 bucket in amazon
-		- database, messageStore and abuseDatabase: you must set up Postgresql and create three database: 
-		accountdb, messagedb, abusedb and grant roles for account in config.
+		- database, messageStore and abuseDatabase: you must set up Postgresql and create three databases: 
+		accountdb, messagedb, abusedb and grant all roles for account in your config.
 		-> you must run config to initial Signal db:
 		~~java -jar ../jars/Signal-version.jar  accountdb migrate  ../config/config.yml~~
 		~~java -jar ../jars/Signal-version.jar  messagedb migrate  ../config/config.yml~~
@@ -23,7 +23,7 @@ Finally, after one month from zero, I succeed in building the Signal on premise 
 # 2. Signal Contact Discovery Service
     a. **Intel SGX**
         - Link github: https://github.com/intel/linux-sgx.git
-        - Before install SGX, you need to check your hardware, it need to support SGX2 by the tool:
+        - Before install, you need to check your hardware, it need to support SGX2 by the tool:
         https://github.com/ayeks/SGX-hardware
         - You can use *MS Azure cloud*, Ubuntu 18.04, it supports SGX2 and now , I'm using it for my product.
         - If your hardware support SGX, install Intel SGX by steps:
