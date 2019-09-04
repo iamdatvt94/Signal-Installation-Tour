@@ -1,0 +1,115 @@
+twilio: # Twilio gateway configuration
+  accountId:    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  accountToken: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  localDomain:  xyz.domain.com
+  numbers:
+    - "+you-twilio-number"
+  messagingServicesId: ""
+
+push:
+  queueSize: 200
+
+turn: # TURN server configuration
+  secret: test
+  uris:
+    - turn:127.0.0.1:3478?transport=udp
+
+cache: # Redis server configuration for cache cluster
+  url: http://1.1.1.1:6379
+  replicaUrls: ["http://2.2.2.2:6379","http://3.3.3.3:6379"]
+
+directory:
+  redis: # Redis server configuration for directory cluster
+    url: "http://1.1.1.1:6379"
+    replicaUrls: ["http://2.2.2.2:6379","http://3.3.3.3:6379"]
+  client: # Configuration for interfacing with Contact Discovery Service cluster
+    userAuthenticationTokenSharedSecret: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    userAuthenticationTokenUserIdSecret: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  sqs:
+    accessKey:    #your-key
+    accessSecret: #your-secret-key
+    queueUrl:     https://you-sqs-uul.fifo
+    region: #region
+  server:
+    replicationUrl: #https://your-cds.url # CDS replication endpoint base url
+    replicationPassword:      aaaaaaaaaaaaaaaaaaaaaa # CDS replication endpoint password
+    replicationCaCertificate: service/config/cds.crt #your cds url cert 
+
+messageCache:
+  redis:
+    url: "http://1.1.1.1:6379"
+    replicaUrls: ["http://2.2.2.2:6379","http://3.3.3.3:6379"]
+
+
+attachments: # AWS S3 configuration
+  accessKey:  #your-key
+  accessSecret: #your-secret-key
+  bucket: #your
+  region: #your
+
+profiles: # AWS S3 configuration
+  accessKey:  #your-key
+  accessSecret: #your-secret-key
+  bucket: #your
+  region: #your
+
+database: # Postgresql database configuration
+  driverClass: org.postgresql.Driver
+  user: #user
+  password: #pass
+  url: jdbc:postgresql://1.2.3.4:5432/accountdb
+
+messageStore: # Postgresql database configuration for message store
+  driverClass: org.postgresql.Driver
+  user: #user
+  password: #pass
+  url: jdbc:postgresql://1.2.3.4:5432/messagedb
+
+abuseDatabase: #Postgresql database configuration for message store
+  driverClass: org.postgresql.Driver
+  user: #user
+  password: #pass
+  url: jdbc:postgresql://1.2.3.4:5432/abusedb
+
+gcm:
+  senderId: #yourid
+  apiKey:  #your key
+
+recaptcha:
+  secret: asdf
+
+accountDatabaseCrawler:
+  chunkSize:       1000
+  chunkIntervalMs: 1000000
+
+apn:
+  bundleId: com.nevermynd.messenger
+  pushCertificate: service/config/certificate.p12
+  pushKey: service/config/cert.key
+
+unidentifiedDelivery:
+  certificate: CiUIDBIhBbTz4h1My+tt+vw+TVscgUe/DeHS0W02tPWAWbTO2xc3EkD+go4bJnU0AcnFfbOLKoiBfCzouZtDYMOVi69rE7r4U9cXREEqOkUmU2WJBjykAxWPCcSTmVTYHDw7hkSp/puG
+  privateKey:  ABOxG29xrfq4E7IrW11Eg7+HBbtba9iiS0500YoBjn4=
+  expiresDays: 100
+
+voiceVerification:
+  url: https://server.anything.net
+  locales:
+    - en
+
+pushScheduler:
+  url: "http://1.1.1.1:6379"
+  replicaUrls: ["http://2.2.2.2:6379","http://3.3.3.3:6379"]
+  circuitBreaker:
+    failureRateThreshold: 50
+    ringBufferSizeInHalfOpenState: 10
+    ringBufferSizeInClosedState: 100
+    waitDurationInOpenStateInSeconds: 10
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8000
+  adminConnectors:
+    - type: http
+      port: 8001
