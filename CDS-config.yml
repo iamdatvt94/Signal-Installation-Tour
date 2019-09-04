@@ -1,0 +1,39 @@
+enclave:
+  spid:    your-intel-spid     # Service Provider ID
+  iasSecretKey:  your-intel-ias-secretkey
+#  certificate:  service/config/server.crt
+#  key:        service/config/server_new.key
+  iasHost:   https://api.trustedservices.intel.com/sgx/dev
+  acceptGroupOutOfDate: false
+  instances:
+    - mrenclave: cd6cfc342937b23b1bdd3bbf9721aa5615ac9ff50a75c5527d441cd3276826c9
+      debug:  true
+
+
+signal:
+  userToken: your-intel-ias-secretkey
+  serverToken: your-intel-ias-secretkey
+
+redis:
+  masterName: your-sentinel-mastername   # Redis Sentinel master name
+  sentinelUrls:
+    - your-sentinel-server:26379
+
+
+directory:
+  initialSize: 10000000
+  minLoadFactor: 0.75
+  maxLoadFactor: 0.85
+  sqs:
+    accessKey: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    accessSecret: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxx
+    queueUrl: https://you-server-sqs.fifo
+    queueRegion: your-region
+
+limits:
+  contactQueries:
+    bucketSize:        50000
+    leakRatePerMinute: 50000
+  remoteAttestations:
+    bucketSize:        50000
+    leakRatePerMinute: 50000
