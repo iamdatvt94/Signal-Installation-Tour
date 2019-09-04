@@ -53,4 +53,8 @@ Finally, after one month from zero, I succeed in building the Signal on premise 
             . Your must be set url to https and get it's certificate for using in Signal service and Client (android, ios,...)
 # 3. Signal Android
 
+# 4. Signal IOS
+
+# 5. Signal Desktop
+
 
