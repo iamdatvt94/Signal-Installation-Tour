@@ -16,7 +16,7 @@ Finally, after one month from zero, I succeed in building the Signal on premise 
 		~~java -jar ../jars/Signal-version.jar  accountdb migrate  ../config/config.yml~~
 		~~java -jar ../jars/Signal-version.jar  messagedb migrate  ../config/config.yml~~
 		~~java -jar ../jars/Signal-version.jar  abusedb migrate  ../config/config.yml~~
-		
+		- Now, just start it by command java -jar ..... and check logs
 
 # 2. Signal Contact Discovery Service
     a. **Intel SGX**
