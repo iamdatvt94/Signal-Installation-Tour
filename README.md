@@ -17,7 +17,23 @@ Finally, I have successfully built the Signal.
         - make -C enclave (Or you can run with sudo)
         - The most important thing is change .yml config file
         # Config CDS file
-        
+        https://github.com/iamdatvt94/Signal-Installation-Tour/blob/master/CDS-config.yml
+        - You need to subscribe Intel® SGX Attestation Service Utilizing Enhanced Privacy ID
+        https://api.portal.trustedservices.intel.com/
+         -> go to Development Access (unlinkable)
+         -> you can get spid and iasSecretKey
+        - mrenclave:
+            . after run command make -C enclave. you cd to folder: service/src/main/resource/enclave/ and can get *.so file
+            -> file's name is mrenclave value
+        - redis config: you setup redis (cluster 3 nodes) and setup sentinel 
+            Ex: https://www.inovex.de/blog/redis-sentinel-make-your-dataset-highly-available/
+        - sqs:
+            . Set up you sqs in amazon , note it must be fifo type
+        - Start CDS service
+            . CDS will running on port 8000
+            . Signal service only using CDS with https url
+            . Your must be set url to https and get it's certificate for using in Signal service and Client (android, ios,...)
+     c. Signal service installation
 # 3. Signal Android
 
 
