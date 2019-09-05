@@ -2,7 +2,8 @@
 # Signal-Installation-Tour
 Finally, after one month from zero, I succeed in building the Signal on premise system and custom it as I want.
 
-![https://www199.lunapic.com/do-not-link-here-use-hosting-instead/156756811786810934?2863527667](https://www199.lunapic.com/do-not-link-here-use-hosting-instead/156756811786810934?2863527667)
+https://drive.google.com/file/d/1-2sAoFejfpsEkw3vVBiKmEPoOwKRgybQ/view
+
 # 1. Signal Server
 	a. First you must setup CDS at step 2 and run it
 	b. Signal service config file
