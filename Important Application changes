@@ -1,0 +1,8 @@
+# Android
+- setUnidentifiedAccessMode(UnidentifiedAccessMode.DISABLED);
+
+# Desktop
+- conversation.js
+- sealedSender: SEALED_SENDER.ENABLED
+
+
