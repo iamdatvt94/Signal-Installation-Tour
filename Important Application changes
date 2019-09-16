@@ -6,3 +6,11 @@
 - sealedSender: SEALED_SENDER.ENABLED
 
 
+# delete 1 or more specific messages
+  - mmsDatabase.delete(id);
+  - deleteMessage(id);
+ ->>> create mapping message id and message type onserver
+ 
+# delete all device messages, remote by server
+
+
