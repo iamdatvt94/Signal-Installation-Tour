@@ -1,5 +1,7 @@
 # Android
 - setUnidentifiedAccessMode(UnidentifiedAccessMode.DISABLED);
+- add more content
+  - getEncryptedMessages (line 1048)
 
 # Desktop
 - conversation.js
